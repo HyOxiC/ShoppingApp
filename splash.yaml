@@ -2,14 +2,14 @@ flutter_native_splash:
   color: "#FFFFFF"
   color_dark: "#272727"
   image: assets\logos\veehavLogo.png
-  image_dark: assets\logos\veehavLogo.png
+  image_dark: assets\logos\veehav.png
 
 
   android_12:
     color: "#FFFFFF"
     color_dark: "#272727"
     image: assets\logos\veehavLogo.png
-    image_dark: assets\logos\veehavLogo.png
+    image_dark: assets\logos\veehav.png
     
 
   web: false
