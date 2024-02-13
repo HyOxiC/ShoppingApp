@@ -1,41 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_trial/utilities/constants/image_strings.dart';
 import 'package:flutter_project_trial/utilities/constants/sizes.dart';
-import 'package:flutter_project_trial/utilities/constants/text_strings.dart';
 import 'package:flutter_project_trial/utilities/helpers/helper_functions.dart';
-
-class OnBoardingScreen extends StatelessWidget {
-  const OnBoardingScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          PageView(
-            children: const [
-              OnBoardingPage(
-                image: TestImages.onBoardingImage1,
-                title: TestTexts.oBoardingTitle1,
-                subTitle: TestTexts.oBoardingSubTitle1,
-              ),
-              OnBoardingPage(
-                image: TestImages.onBoardingImage2,
-                title: TestTexts.oBoardingTitle2,
-                subTitle: TestTexts.oBoardingSubTitle2,
-              ),
-              OnBoardingPage(
-                image: TestImages.onBoardingImage3,
-                title: TestTexts.oBoardingTitle3,
-                subTitle: TestTexts.oBoardingSubTitle3,
-              )
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({
