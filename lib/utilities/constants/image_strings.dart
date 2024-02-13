@@ -14,9 +14,9 @@ class TestImages{
 
   // onboarding images
 
-  static const String onBoardingImage1 ="assets/images/on_boarding_images/Oshopping.jpg";
+  static const String onBoardingImage1 ="assets/images/on_boarding_images/onlineShop.gif";
   static const String onBoardingImage2 ="assets/images/on_boarding_images/addToCart.gif";
-  static const String onBoardingImage3 ="assets/images/on_boarding_images/inNoTime.gif";
+  static const String onBoardingImage3 ="assets/images/on_boarding_images/delivery.gif";
 
 
 
