@@ -14,7 +14,7 @@ class TestColors {
       ]);
 
   // Basic App Colors
-  static const Color primaryColor = Color(0xFF4B68FF);
+  static const Color primaryColor = Color.fromARGB(255, 111, 69, 211);
   static const Color secondaryColor = Color(0xFFFFE24B);
   static const Color accent = Color(0xFFB0C7FF);
   static const Color testAccent = Color(0xFFB0C788);   //temp

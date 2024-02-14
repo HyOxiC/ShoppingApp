@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_trial/features/screens/login/login.dart';
 import 'package:get/get.dart';
 
 class OnBoardingController extends GetxController {
@@ -23,7 +24,7 @@ void dotNavigationClick(index) {
 /// Update current index and jump to next page
 void nextPage() {
   if(currentPageIndex.value == 2){
-    //Get.to(LoginScreen());
+    Get.offAll(const LoginScreen());
   } else {
     int page =currentPageIndex.value+1;
     pageController.jumpToPage(page);

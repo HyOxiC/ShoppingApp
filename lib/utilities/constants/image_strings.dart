@@ -5,8 +5,8 @@ class TestImages{
 
   // ---- App Logos
 
-  static const String darkAppLogo = "assets/logos/veehav.png";
-  static const String lightAppLogo = "assets/logos/veehav.png";
+  static const String darkAppLogo = "assets/logos/veehavtest.png";
+  static const String lightAppLogo = "assets/logos/veehavtest.png";
 
   // ---- Social Logos
 

@@ -13,7 +13,6 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final controller = Get.put(OnBoardingController());
 
     return Scaffold(
@@ -24,7 +23,6 @@ class OnBoardingScreen extends StatelessWidget {
           PageView(
             controller: controller.pageController,
             onPageChanged: controller.updatePageIndicator,
-
             children: const [
               OnBoardingPage(
                 image: TestImages.onBoardingImage1,
@@ -60,5 +58,3 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
-
-

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_trial/common/styles/spacing_styles.dart';
-import 'package:flutter_project_trial/utilities/constants/image_strings.dart';
+import 'package:flutter_project_trial/features/screens/login/widgets/login_form.dart';
+import 'package:flutter_project_trial/features/screens/login/widgets/login_header.dart';
+import 'package:flutter_project_trial/utilities/constants/sizes.dart';
 import 'package:flutter_project_trial/utilities/helpers/helper_functions.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -17,16 +19,20 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               // Logo, title& sub-title
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image(
-                    image: dark
-                        ? const AssetImage(TestImages.darkAppLogo)
-                        : const AssetImage(TestImages.lightAppLogo),
-                  ),
-                ],
+              TestLoginScreenHeader(dark: dark),
+
+              /// Form
+              const TestLoginForm(),
+
+              // Divider
+              TestFormDivider(dark: dark),
+              const SizedBox(
+                height: TestSizes.defaultSpace / 2,
               ),
+
+              // footer
+
+              const TestSocialLogins()
             ],
           ),
         ),
