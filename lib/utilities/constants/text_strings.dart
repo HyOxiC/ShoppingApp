@@ -23,7 +23,7 @@ static const String changeYourPasswordSubTitle ="We have sent a secure link t yo
 static const String confirmEmailTitle ="Verify your E-mail id";
 static const String confirmEmailSubTitle ="Please verify your email for unlimited deals and offers";
 static const String emailNotRecievedMessage ="Didn't get the E-mail? check your junk/spam or resend it";
-static const String yourAccountCreatedTitle ="Your account has been succewsfully created";
+static const String yourAccountCreatedTitle ="Your account has been successfully created";
 static const String yourAccountCreatedSubTitle ="Welcome to the amazing experience with VeeHav";
 
 

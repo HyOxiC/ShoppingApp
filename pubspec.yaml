@@ -59,6 +59,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/on_boarding_images/
+    - assets/images/sign_up_images/
     - assets/logos/
     - assets/icons/
     

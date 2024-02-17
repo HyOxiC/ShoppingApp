@@ -18,6 +18,11 @@ class TestImages{
   static const String onBoardingImage2 ="assets/images/on_boarding_images/addToCart.gif";
   static const String onBoardingImage3 ="assets/images/on_boarding_images/delivery.gif";
 
+  // signup images
+  static const String signUpAuth ="assets/images/sign_up_images/authentication.gif";
+  static const String verifiedEmail ="assets/images/sign_up_images/verified.gif";
+  static const String forgotPassword ="assets/images/sign_up_images/forgotPassword.gif";
+  static const String emailDelivered ="assets/images/sign_up_images/emailDelivered.gif";
 
 
 
