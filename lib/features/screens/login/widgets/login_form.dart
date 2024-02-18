@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_trial/features/screens/password_configuration/forgot_password.dart';
 import 'package:flutter_project_trial/features/screens/signup/signup.dart';
+import 'package:flutter_project_trial/navigation_menu.dart';
 import 'package:flutter_project_trial/utilities/constants/colors.dart';
 import 'package:flutter_project_trial/utilities/constants/sizes.dart';
 import 'package:flutter_project_trial/utilities/constants/text_strings.dart';
@@ -68,7 +69,7 @@ class TestLoginForm extends StatelessWidget {
                 style: OutlinedButton.styleFrom(
                     backgroundColor: TestColors.primaryColor,
                     side: const BorderSide(color: TestColors.primaryColor)),
-                onPressed: () {},
+                onPressed: () {Get.to(const NavigationBarScreen());},
                 child: const Text(TestTexts.signIn),
               ),
             ),
