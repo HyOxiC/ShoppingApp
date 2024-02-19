@@ -39,6 +39,7 @@ class NavigationBarScreen extends StatelessWidget {
 }
 
 class NavigationController extends GetxController {
+  
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [

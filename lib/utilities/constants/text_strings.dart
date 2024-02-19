@@ -59,8 +59,8 @@ static const String oBoardingSubTitle3 = "VeeHav, Where elegance meets comfort!"
 
 
 // -- Home
-static const String homeAppBarTitle = "Good day for shopping with us";
-static const String homeAppBarSubTitle = "Rayyan Systems";
+static const String homeAppBarTitle = "Good day for shopping with";
+static const String homeAppBarSubTitle = "VeeHav";
 
 
 }
