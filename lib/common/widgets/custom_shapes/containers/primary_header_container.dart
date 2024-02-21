@@ -16,7 +16,7 @@ class TestPrimaryHeaderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return TestCurvedEdges(
       child: Container(
-        height: 300,
+        height: 320,
         color: TestColors.primaryColor,
         padding: const EdgeInsets.only(bottom: 0),
         // if error chhance size isfinite is notr true i  stack or something
@@ -37,7 +37,7 @@ class TestPrimaryHeaderContainer extends StatelessWidget {
                     backgroundColor: TestColors.white.withOpacity(0.1),
                   )),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: TestSizes.m),
+                padding: const EdgeInsets.all( TestSizes.s),
                 child: Positioned(top: 0, left: 0, child: child),
               )
             ],

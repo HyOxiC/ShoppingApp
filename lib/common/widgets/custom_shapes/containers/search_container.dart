@@ -10,43 +10,48 @@ class TestSearchContainer extends StatelessWidget {
     super.key,
     required this.text,
     this.icon = Iconsax.search_normal,
-    this.showBackGround = true ,
+    this.showBackGround = true,
     this.showBorder = true,
+    this.onTap,
   });
 
   final String text;
   final IconData? icon;
   final bool showBackGround, showBorder;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     final dark = TestHelperFunctions.isDarkMode(context);
-    return Container(
-      width: TestDeviceUtils.getScreenWidth(context),
-      padding: const EdgeInsets.all(TestSizes.m),
-      decoration: BoxDecoration(
-        color: showBackGround
-            ? dark
-                ? TestColors.dark
-                : TestColors.light
-            : Colors.transparent,
-        borderRadius: BorderRadius.circular(TestSizes.cardRadiusL),
-        border: showBorder ? Border.all(color: Colors.grey) : null,
-      ),
-      child: Row(
-        children: [
-          Icon(
-            icon,
-            color: TestColors.black,
-          ),
-          const SizedBox(
-            width: TestSizes.spaceBtwItems,
-          ),
-          Text(
-            text,
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
-        ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: TestDeviceUtils.getScreenWidth(context),
+        padding: const EdgeInsets.symmetric(horizontal: TestSizes.m,vertical:  TestSizes.m),
+        decoration: BoxDecoration(
+          color: showBackGround
+              ? dark
+                  ? TestColors.dark
+                  : TestColors.light
+              : Colors.transparent,
+          borderRadius: BorderRadius.circular(TestSizes.cardRadiusL),
+          border: showBorder ? Border.all(color: Colors.grey) : null,
+        ),
+        child: Row(
+          children: [
+            Icon(
+              icon,
+              color: dark ? TestColors.white : TestColors.black,
+            ),
+            const SizedBox(
+              width: TestSizes.spaceBtwItems,
+            ),
+            Text(
+              text,
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+          ],
+        ),
       ),
     );
   }
