@@ -38,6 +38,18 @@ class TestImages{
   static const String promoBanner3 ="assets/images/banners/banner3.jpg";
 
 
+  // products
+  static const String productImage1 ="assets/images/products/VL1.png";
+  static const String productImage2 ="assets/images/products/VL2.png";
+  static const String productImage3 ="assets/images/products/VS1.jpg";
+  static const String productImage4 ="assets/images/products/VS2.jpg";
+  static const String productSubImage1 ="assets/images/products/VL3.jpg";
+  static const String productSubImage2 ="assets/images/products/VL4.jpg";
+  static const String productSubImage3 ="assets/images/products/VS3.jpg";
+  static const String productSubImage4 ="assets/images/products/VS4.jpg";
+
+
+
 
 
 

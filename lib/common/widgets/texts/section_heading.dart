@@ -25,7 +25,7 @@ class TestSectionHeading extends StatelessWidget {
           Text(
             title,
             style:
-                Theme.of(context).textTheme.bodyMedium!.apply(color: textColor),
+                Theme.of(context).textTheme.bodyMedium!.apply(color:TestColors.white),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),

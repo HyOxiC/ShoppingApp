@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_trial/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:flutter_project_trial/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:flutter_project_trial/common/widgets/products/product_cards/product_cards_vertical.dart';
+import 'package:flutter_project_trial/common/widgets/products/product_cards/products_grid_layout.dart';
 import 'package:flutter_project_trial/common/widgets/texts/section_heading.dart';
 import 'package:flutter_project_trial/features/screens/home/widgets_home/home_appbar.dart';
 import 'package:flutter_project_trial/features/screens/home/widgets_home/home_categories.dart';
@@ -13,13 +15,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Header
-            TestPrimaryHeaderContainer(
+            const TestPrimaryHeaderContainer(
               child: Column(
                 children: [
                   // custom appbar
@@ -51,9 +53,24 @@ class HomeScreen extends StatelessWidget {
 
             // Body
             Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: TestSizes.defaultSpace, vertical: TestSizes.s),
-              child: TestPromoSlider(banners: [TestImages.promoBanner1,TestImages.promoBanner2,TestImages.promoBanner3],),
+              padding: const EdgeInsets.all(TestSizes.defaultSpace/2),
+              child: Column(
+                children: [
+                  const TestPromoSlider(
+                    banners: [
+                      TestImages.promoBanner1,
+                      TestImages.promoBanner2,
+                      TestImages.promoBanner3
+                    ],
+                  ),
+                  const SizedBox(height: TestSizes.spaceBtwItems,),
+                  //Popular products
+                  TestGridProductsLayout(itemCount: 4,itemBuilder: ( _, index) => const TestProductCardsVertical(),),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -61,3 +78,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+

@@ -6,7 +6,7 @@ class TestRoundedBannerImage extends StatelessWidget {
   const TestRoundedBannerImage({
     super.key,
     this.width,
-    this.height,
+    this.height= 200,
     required this.imageUrl,
     this.applyImageRadius = true,
     this.border,
