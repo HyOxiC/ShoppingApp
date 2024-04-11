@@ -34,26 +34,35 @@ class HomeScreen extends StatelessWidget {
                   TestSearchContainer(
                     text: 'Search in store',
                   ),
+                  SizedBox(
+                    height: TestSizes.s,
+                  ),
 
                   // categories
-                  Column(
-                    children: [
-                      TestSectionHeading(
-                        title: 'Popular categories',
-                      ),
-                      SizedBox(height: TestSizes.spaceBtwInputFields / 5),
+                  Padding(
+                    padding: EdgeInsets.only(left: TestSizes.s),
+                    child: Column(
+                      children: [
+                        TestSectionHeading(
+                          title: 'Popular categories',
+                        ),
+                        SizedBox(height: TestSizes.spaceBtwInputFields / 5),
 
-                      // categories
-                      TestHomeCategories()
-                    ],
+                        // categories
+                        TestHomeCategories()
+                      ],
+                    ),
                   ),
+                  SizedBox(
+                    height: TestSizes.spaceBtwSections,
+                  )
                 ],
               ),
             ),
 
             // Body
             Padding(
-              padding: const EdgeInsets.all(TestSizes.defaultSpace/2),
+              padding: const EdgeInsets.all(TestSizes.defaultSpace / 2),
               child: Column(
                 children: [
                   const TestPromoSlider(
@@ -63,9 +72,23 @@ class HomeScreen extends StatelessWidget {
                       TestImages.promoBanner3
                     ],
                   ),
-                  const SizedBox(height: TestSizes.spaceBtwItems,),
+                  const SizedBox(
+                    height: TestSizes.spaceBtwItems,
+                  ),
+                  // Heading
+                  TestSectionHeading(
+                    title: 'Popular Products',
+                    onPressed: () {},
+                  ),
+                  const SizedBox(
+                    height: TestSizes.spaceBtwItems,
+                  ),
+
                   //Popular products
-                  TestGridProductsLayout(itemCount: 4,itemBuilder: ( _, index) => const TestProductCardsVertical(),),
+                  TestGridProductsLayout(
+                    itemCount: 4,
+                    itemBuilder: (_, index) => const TestProductCardsVertical(),
+                  ),
                   const SizedBox(
                     height: 50,
                   ),
@@ -78,4 +101,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-

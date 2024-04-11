@@ -1,4 +1,5 @@
 /// All the app images in string format
+library;
 
 class TestImages{
 

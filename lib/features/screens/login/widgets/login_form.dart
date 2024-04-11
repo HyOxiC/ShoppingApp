@@ -31,6 +31,7 @@ class TestLoginForm extends StatelessWidget {
             const SizedBox(
               height: TestSizes.spaceBtwInputFields,
             ),
+            //Password
             TextFormField(
               decoration: const InputDecoration(
                   prefixIcon: Icon(Iconsax.password_check),
@@ -46,14 +47,18 @@ class TestLoginForm extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                // remember me
                 Row(
                   children: [
                     Checkbox(value: true, onChanged: (value) {}),
                     const Text(TestTexts.rememberMe),
                   ],
                 ),
+                // Forgot Password
                 TextButton(
-                  onPressed: () {Get.to(const ForgotPasswordScreen());},
+                  onPressed: () {
+                    Get.to(const ForgotPasswordScreen());
+                  },
                   child: const Text(TestTexts.forgotPassword),
                 ),
               ],
@@ -69,7 +74,9 @@ class TestLoginForm extends StatelessWidget {
                 style: OutlinedButton.styleFrom(
                     backgroundColor: TestColors.primaryColor,
                     side: const BorderSide(color: TestColors.primaryColor)),
-                onPressed: () {Get.to(const NavigationBarScreen());},
+                onPressed: () {
+                  Get.to(const NavigationBarScreen());
+                },
                 child: const Text(TestTexts.signIn),
               ),
             ),

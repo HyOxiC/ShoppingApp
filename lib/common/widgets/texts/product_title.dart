@@ -19,7 +19,7 @@ class TestProductTitleText extends StatelessWidget {
       title,
       style: smallSize
           ? Theme.of(context).textTheme.labelSmall!.apply(fontSizeFactor: 0.8)
-          : Theme.of(context).textTheme.labelLarge ,
+          : Theme.of(context).textTheme.labelLarge,
       overflow: TextOverflow.ellipsis,
       maxLines: maxLines,
       textAlign: textAlign,

@@ -1,5 +1,6 @@
 
-/// List of Enums
+///  -- List of enums
+library;
 
 /// Cannot be created inside a class
 

@@ -3,7 +3,9 @@ import 'package:flutter_project_trial/common/styles/shadow_styles.dart';
 import 'package:flutter_project_trial/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:flutter_project_trial/common/widgets/custom_shapes/icons/test_icons_circular.dart';
 import 'package:flutter_project_trial/common/widgets/images_custom/test_rounded_banner.dart';
+import 'package:flutter_project_trial/common/widgets/products/product_cards/products_price_text.dart';
 import 'package:flutter_project_trial/common/widgets/texts/product_title.dart';
+import 'package:flutter_project_trial/common/widgets/texts/test_brand_name_verified.dart';
 import 'package:flutter_project_trial/utilities/constants/colors.dart';
 import 'package:flutter_project_trial/utilities/constants/image_strings.dart';
 import 'package:flutter_project_trial/utilities/constants/sizes.dart';
@@ -18,7 +20,7 @@ class TestProductCardsVertical extends StatelessWidget {
     final dark = TestHelperFunctions.isDarkMode(context);
     // container with size, padding, color, edgees, radius and shahdow
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -28,7 +30,7 @@ class TestProductCardsVertical extends StatelessWidget {
             color: dark ? TestColors.black : TestColors.white),
         child: Column(
           children: [
-            // thumbnail, wishlist, discount tag
+            // thumbnail image, wishlist, discount tag
             TestRoundedContainer(
               height: 180,
               width: 160,
@@ -36,20 +38,24 @@ class TestProductCardsVertical extends StatelessWidget {
               backgroundColor: dark ? TestColors.dark : TestColors.light,
               child: Stack(
                 children: [
+                  // thumbnail image
+
                   const TestRoundedBannerImage(
                     height: 180,
                     width: 180,
                     imageUrl: TestImages.productImage2,
                     applyImageRadius: true,
                   ),
-      
+
                   // sale tag
+
                   Positioned(
                     top: 4,
                     left: 4,
                     child: TestRoundedContainer(
                       radius: TestSizes.s,
-                      backgroundColor: TestColors.secondaryColor.withOpacity(0.8),
+                      backgroundColor:
+                          TestColors.secondaryColor.withOpacity(0.8),
                       padding: const EdgeInsets.symmetric(
                           horizontal: TestSizes.s, vertical: TestSizes.xs),
                       child: Text(
@@ -61,7 +67,9 @@ class TestProductCardsVertical extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   // Favourite icon
+
                   const Positioned(
                     top: 1,
                     right: 2,
@@ -75,66 +83,60 @@ class TestProductCardsVertical extends StatelessWidget {
               ),
             ),
             // Details
-            Padding(
-              padding: const EdgeInsets.only(left: TestSizes.s),
+            const Padding(
+              padding: EdgeInsets.only(left: TestSizes.s),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TestProductTitleText(
+                  TestProductTitleText(
                     title: 'VeeHav car neck rest pillows (small)',
                     smallSize: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TestSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'VeeHav',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(
-                        width: TestSizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: TestColors.primaryColor,
-                        size: TestSizes.iconSizeXs,
-                      ),
-                    ],
+
+                  // brand name and verified logo
+                  BrandNameVerified(
+                    title: 'VeeHav',
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 6.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          '\₹699',
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: Theme.of(context).textTheme.headlineSmall,
+                ],
+              ),
+            ),
+            // Add spacer here to keep size of each box in case 1 or 2 lines of heading
+            const Spacer(),
+
+            // price
+            Padding(
+              padding: const EdgeInsets.only(right: 6.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(left: 4),
+                    child: TestProductPriceText(
+                      price: '699',
+                    ),
+                  ),
+
+                  // Add to cart
+                  Container(
+                    decoration: const BoxDecoration(
+                      color: TestColors.primaryColor,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(TestSizes.cardRadiusM),
+                          bottomRight:
+                              Radius.circular(TestSizes.productImageRadius)),
+                    ),
+                    child: SizedBox(
+                      width: TestSizes.iconSizeL,
+                      height: TestSizes.iconSizeL,
+                      child: Center(
+                        child: Icon(
+                          Iconsax.add,
+                          color: dark ? TestColors.black : TestColors.white,
                         ),
-                        Container(
-                          decoration: const BoxDecoration(
-                            color: TestColors.primaryColor,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(TestSizes.cardRadiusM),
-                                bottomRight:
-                                    Radius.circular(TestSizes.productImageRadius)),
-                          ),
-                          child: SizedBox(
-                              width: TestSizes.iconSizeL,
-                              height: TestSizes.iconSizeL,
-                              child: Center(
-                                child: Icon(
-                                  Iconsax.add,
-                                  color: dark? TestColors.black : TestColors.white,
-                                ),
-                              )),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ],
